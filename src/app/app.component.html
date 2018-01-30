@@ -1,0 +1,9 @@
+<h1>{{ title }}!</h1>
+<nav>
+	<a  routerLink="/login" routerLinkActive="active">Login</a>
+	<a routerLink="/home" routerLinkActive="active">Home</a>
+  	<a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+  	<a routerLink="/heroes" secured [accessControlList]="['ROLE_ADMIN']" routerLinkActive="active">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
